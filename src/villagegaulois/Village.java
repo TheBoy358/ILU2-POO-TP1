@@ -73,7 +73,7 @@ public class Village {
 		StringBuilder chaine = new StringBuilder();
 		for (int i = 0; i < Marche.etals.length; i++) {
 			if (etals[i].trouverEtals(produit) != null) {
-				chaine.append("Seul le vendeur " + etals[i].trouverVendeur() + " propose des " + produit + " au marché.");
+				chaine.append("Seul le vendeur " + etals[i].trouverVendeur(villageois) + " propose des " + produit + " au marché.");
 				return chaine.toString();
 			}
 		}
@@ -90,7 +90,8 @@ public class Village {
 			if (etals[i].trouverVendeur(vendeur) != null) {
 				etals[i] = null;
 			}
-			chaine.append(false)
+			chaine.append("Le vendeur " + vendeur + " quitte son étal, il a vendu 20 fleurs parmi les 20 qu'il voulait vendre.");
+			return chaine.toString();
 		}
 	}
 	
