@@ -71,9 +71,10 @@ public class Village {
 	
 	public String rechercherVendeursProduit(String produit) {
 		StringBuilder chaine = new StringBuilder();
+		Gaulois vendeur = new Gaulois(this.getNom(), this.);
 		for (int i = 0; i < Marche.etals.length; i++) {
 			if (etals[i].trouverEtals(produit) != null) {
-				chaine.append("Seul le vendeur " + etals[i].trouverVendeur(villageois) + " propose des " + produit + " au marché.");
+				chaine.append("Seul le vendeur " + etals[i].trouverVendeur(vendeur) + " propose des " + produit + " au marché.");
 				return chaine.toString();
 			}
 		}
